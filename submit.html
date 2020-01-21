@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recommend a New Bookmark</title>
+    <style>
+        li{
+            display: inline;
+                font-size: x-large;
+                border: 1;
+                border-style: dotted;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 3px;
+                padding-right: 3px;
+                color: blueviolet;
+                font-weight: bolder;
+                font-family: Verdana;
+        }
+      
+        </style>
+</head>
+<body>
+
+     <!--Menus-->
+     <ul>
+        <a href="index.html"><li>Home</li></a>&nbsp;
+        <a href="movies/movies.html"><li>movies</li></a>&nbsp;
+        <a href="games/games.html"><li>games</li></a>&nbsp;
+        <a href="software/software.html"><li>software</li></a>&nbsp;
+        <a href="socialmedia/socialmedia.html"><li>Social Media</li></a>
+        <a href="submit.html"><li>Add BookMark</li></a>
+
+    </ul>
+    <h1>Submit a New BookMark</h1><br>
+    <form method="POST" action="https://www.abc.com/api/addnewbookmark">
+       <label> URL : &nbsp; &nbsp; &nbsp; &nbsp; <input type="url" name="site_url" required></label><br>
+       <label> Site Name: <input type="text" name="site_name" required></label><br><br>
+       <label> SFW or NSFW: &nbsp; &nbsp;
+          NSFW &nbsp; <input type="radio" value="NSFW" name="sensitivity" required></label> &nbsp
+          SFW &nbsp; <input type="radio" value="NSFW" name="sensitivity" required></label>  <br>
+        <label>
+            Select Category  :
+          <select required>
+            <option value="Games" name="games">Games</option>
+            <option value="movies" name="games">Movies</option>
+            <option value="software" name="software">Software</option>
+            <option value="social_media" name="social">Social Media</option>
+        </select>
+    </label>
+    <br><br><input type="submit">
+    </form>
+</body>
+</html>
